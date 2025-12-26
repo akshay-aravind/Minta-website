@@ -1,31 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import BoomGeneral from '../public/clientlogos/BoomGeneral.png';
-import Huawei from '../public/clientlogos/Huawei.png';
-import PalmTower from '../public/clientlogos/Palm.png';
-import AlDarwish from '../public/clientlogos/AlDarwish.png';
-import HBK from '../public/clientlogos/HBK.png';
-import Smeet from '../public/clientlogos/Smeet.png';
-import Msheireb from '../public/clientlogos/Msheireb.png';
-import Katara from '../public/clientlogos/Katara.png';
-import Quest from '../public/clientlogos/Quest.png';
-import HCC from '../public/clientlogos/HCC.png';
-import LivingIN from '../public/clientlogos/LivingIN.png';
-import AlJaber from '../public/clientlogos/AlJaber.png';
+
 const ClientScreen = () => {
   const clients = [
-    { name: 'Boom General Contractors', logo: BoomGeneral },
-    { name: 'Huawei', logo: Huawei },
-    { name: 'Palm Tower', logo: PalmTower },
-    { name: 'Al Darwish Engineering', logo: AlDarwish },
-    { name: 'HBK', logo: HBK },
-    { name: 'Smeet', logo: Smeet },
-    { name: 'Msheireb Properties', logo: Msheireb },
-    { name: 'Katara Hospitality', logo: Katara },
-    { name: 'Quest International', logo: Quest },
-    { name: 'Hassanesco', logo: HCC },
-    { name: 'Living IN', logo: LivingIN },
-    { name: 'Al Jaber united', logo: AlJaber },
+    { name: 'Boom General Contractors', logo: '/Minta-website/clientlogos/BoomGeneral.png' },
+    { name: 'Huawei', logo: '/Minta-website/clientlogos/Huawei.png' },
+    { name: 'Palm Tower', logo: '/Minta-website/clientlogos/Palm.png' },
+    { name: 'Al Darwish Engineering', logo: '/Minta-website/clientlogos/AlDarwish.png' },
+    { name: 'HBK', logo: '/Minta-website/clientlogos/HBK.png' },
+    { name: 'Smeet', logo: '/Minta-website/clientlogos/Smeet.png' },
+    { name: 'Msheireb Properties', logo: '/Minta-website/clientlogos/Msheireb.png' },
+    { name: 'Katara Hospitality', logo: '/Minta-website/clientlogos/Katara.png' },
+    { name: 'Quest International', logo: '/Minta-website/clientlogos/Quest.png' },
+    { name: 'Hassanesco', logo: '/Minta-website/clientlogos/HCC.png' },
+    { name: 'Living IN', logo: '/Minta-website/clientlogos/LivingIN.png' },
+    { name: 'Al Jaber united', logo: '/Minta-website/clientlogos/AlJaber.png' },
   ];
   return (
     <section id='clients' className='py-24  bg-white'>

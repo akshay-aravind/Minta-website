@@ -29,7 +29,7 @@ const AboutScreen = () => {
             transition={{ duration: 0.6 }}
           >
             <img
-              src='/Minta-website/about.jpg'
+              src='/about.jpg'
               alt='Professional team'
               className='rounded-2xl shadow-2xl w-full max-h-[50rem] object-cover'
             />

@@ -38,7 +38,7 @@ export default function App() {
         <div className='max-w-7xl mx-auto px-6 py-2 flex items-center justify-between'>
           <div className='flex items-center gap-2'>
             <img
-              src='/Minta-website/Companylogo.jpg'
+              src='/Companylogo.jpg'
               alt='Minta Logo'
               className='max-w-[200px] max-h-[100px] object-contain'
             />
@@ -85,7 +85,7 @@ export default function App() {
     '
     style={{
       backgroundImage:
-        "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('/Minta-website/cover.jpg')",
+        "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('/cover.jpg')",
     }}
   />
 
@@ -237,7 +237,7 @@ export default function App() {
               transition={{ duration: 0.6 }}
             >
               <img
-                src='/Minta-website/labours.jpg'
+                src='/labours.jpg'
                 alt='Workspace'
                 className='rounded-2xl shadow-2xl'
               />

@@ -10,7 +10,7 @@ const FooterScreen = () => {
           <div className='grid md:grid-cols-4 gap-12 mb-12'>
             {/* Company Info */}
             <div>
-                <img src='/Minta-website/Companylogo.jpg' alt='Minta Logo' className='mb-4 w-32' />
+                <img src='/Companylogo.jpg' alt='Minta Logo' className='mb-4 w-32' />
               <p className='text-gray-400 leading-relaxed'>
                 Building trust through quality workmanship, dedicated manpower, and engineering excellence.
               </p>

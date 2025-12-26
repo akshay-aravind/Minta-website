@@ -1,7 +1,4 @@
 
-  # Corporate Website UI Design
-
-  This is a code bundle for Corporate Website UI Design. The original project is available at https://www.figma.com/design/OvqmCaOLoZWOrbj76lgjjv/Corporate-Website-UI-Design.
 
   ## Running the code
 

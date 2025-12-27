@@ -7,28 +7,41 @@ interface ServiceCardProps {
   title: string;
   description: string;
   details: string;
+  image: string;
+  gradient: string;
 }
 
-export function ServiceCard({ icon: Icon, title, description, details }: ServiceCardProps) {
+export function ServiceCard({ icon: Icon, title, description, details, image, gradient }: ServiceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <motion.div
       layout
       onClick={() => setIsExpanded(!isExpanded)}
-      className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-100 overflow-hidden"
-      whileHover={{ y: -8 }}
+      className="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-100 overflow-hidden group"
+      whileHover={{ y: -8, scale: 1.02 }}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
     >
-      <div className="flex flex-col items-start">
-        <div className="w-16 h-16 bg-linear-to-br from-red-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-md">
-          <Icon className="w-8 h-8 text-white" />
+      {/* Image Header */}
+      <div className="relative h-48 overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+        />
+        <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-60`} />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg">
+            <Icon className="w-8 h-8 text-white" />
+          </div>
         </div>
-        
+      </div>
+
+      <div className="p-8">
         <h3 className="mb-4 text-gray-900">{title}</h3>
-        
+
         <p className="text-gray-600 mb-4 leading-relaxed">
           {description}
         </p>
@@ -45,7 +58,7 @@ export function ServiceCard({ icon: Icon, title, description, details }: Service
           </div>
         </motion.div>
 
-        <button className="mt-4 text-blue-600 hover:text-blue-700 transition-colors flex items-center gap-2">
+        <button className={`mt-4 bg-gradient-to-r ${gradient} text-white px-6 py-2 rounded-full hover:shadow-lg transition-all flex items-center gap-2`}>
           {isExpanded ? "Show Less" : "Learn More"}
           <motion.span
             animate={{ rotate: isExpanded ? 180 : 0 }}

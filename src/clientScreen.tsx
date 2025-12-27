@@ -17,7 +17,7 @@ const ClientScreen = () => {
     { name: 'Al Jaber united', logo: '/clientlogos/AlJaber.png' },
   ];
   return (
-    <section id='clients' className='py-24  bg-white'>
+    <section id='clients' className='py-24  bg-gradient-to-r from-red-200 to-blue-300'>
       <div className='max-w-7xl mx-auto'>
         <motion.div
           className='text-center mb-16'
@@ -80,7 +80,7 @@ const ClientScreen = () => {
           }
           
           .animate-marquee {
-            animation: marquee 14s linear infinite;
+            animation: marquee 6s linear infinite;
             display: flex;
           }
           
@@ -115,7 +115,7 @@ const ClientScreen = () => {
               <div className='text-gray-900' style={{ fontWeight: 600 }}>
                 Raheeb VC
               </div>
-              {/* <div className='text-gray-600'>CTO, TechCorp International</div> */}
+              {/* <div className='text-gray-600'>T</div> */}
             </div>
           </div>
         </motion.div>

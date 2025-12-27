@@ -82,15 +82,15 @@ const AboutScreen = () => {
             </p>
 
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6'>
-              <div className='text-center p-4 bg-blue-50 rounded-xl bg-gradient-to-br from-red-200 to-cyan-300'>
+              <div className='text-center p-4 bg-blue-50 rounded-xl '>
                 <CheckCircle2 className='w-8 h-8 text-blue-600  mx-auto mb-2' />
                 <div className='text-gray-900 font-medium'>Quality</div>
               </div>
-              <div className='text-center p-4 bg-blue-50 rounded-xl bg-gradient-to-br from-blue-200 to-pink-300 '>
+              <div className='text-center p-4 bg-blue-50 rounded-xl  '>
                 <TrendingUp className='w-8 h-8 text-blue-600 mx-auto mb-2' />
                 <div className='text-gray-900 font-medium'>Innovation</div>
               </div>
-              <div className='text-center p-4 bg-blue-50 rounded-xl bg-gradient-to-br from-blue-200 to-orange-300'>
+              <div className='text-center p-4 bg-blue-50 rounded-xl '>
                 <Users className='w-8 h-8 text-blue-600 mx-auto mb-2' />
                 <div className='text-gray-900 font-medium'>Partnership</div>
               </div>

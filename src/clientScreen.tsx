@@ -88,19 +88,19 @@ const ClientScreen = () => {
         `}</style>
 
         {/* Testimonial */}
-        <motion.div
+        {/* <motion.div
           className='max-w-4xl mx-auto bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl p-12 shadow-lg'
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-        >
-          <div
+        > */}
+        {/* <div
             className='text-blue-600 mb-6'
             style={{ fontSize: '3rem', lineHeight: 1 }}
           >
             "
-          </div>
-          <p
+          </div> */}
+        {/* <p
             className='text-gray-700 mb-6 italic'
             style={{ fontSize: '1.25rem', lineHeight: 1.8 }}
           >
@@ -108,19 +108,17 @@ const ClientScreen = () => {
             workforce, engineering support, and prompt service helped us achieve
             consistent results. We now rely on Minta as an integral part of our
             operations.
-          </p>
-          <div className='flex items-center gap-4'>
-            {/* <div className='w-14 h-14 bg-linear-to-br from-red-500 to-blue-600 rounded-full' /> */}
+          </p> */}
+        {/* <div className='flex items-center gap-4'>
             <div>
               <div className='text-gray-900' style={{ fontWeight: 600 }}>
                 Raheeb VC
               </div>
-              {/* <div className='text-gray-600'>T</div> */}
             </div>
-          </div>
-        </motion.div>
+          </div> */}
+        {/* </motion.div> */}
       </div>
-    </section>
+    </section >
   );
 };
 

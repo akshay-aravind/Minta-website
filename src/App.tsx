@@ -6,7 +6,6 @@ import {
   Menu,
   X
 } from 'lucide-react';
-import { ServiceCard } from './components/ServiceCard';
 import { VisionMissionCard } from './components/VisionMissionCard';
 import { StatCounter } from './components/StatCounter';
 import { Button } from './components/ui/button';

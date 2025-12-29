@@ -24,7 +24,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img
-              src='/Companylogo.jpg'
+              src='/Companylogo.png'
               alt='Minta Logo'
               className='max-w-[200px] max-h-[100px] object-contain'
             />

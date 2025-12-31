@@ -1,7 +1,13 @@
-import { Building2, Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
-import React from 'react'
-
-
+import {
+  Building2,
+  Facebook,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+} from 'lucide-react';
+import React from 'react';
 
 const FooterScreen = () => {
   return (
@@ -10,9 +16,14 @@ const FooterScreen = () => {
         <div className='grid md:grid-cols-4 gap-12 mb-12'>
           {/* Company Info */}
           <div>
-            <img src='/Companylogo.png' alt='Minta Logo' className='mb-4 w-32' />
+            <img
+              src='/CompanylogoLight.png'
+              alt='Minta Logo'
+              className='mb-4 w-32'
+            />
             <p className='text-gray-400 leading-relaxed'>
-              Building trust through quality workmanship, dedicated manpower, and engineering excellence.
+              Building trust through quality workmanship, dedicated manpower,
+              and engineering excellence.
             </p>
           </div>
 
@@ -113,17 +124,30 @@ const FooterScreen = () => {
             </h4>
             <ul className='space-y-3'>
               <li className='flex items-start gap-3'>
-                <Mail className='w-5 h-5 text-blue-400 mt-0.5' />
-                <span className='text-gray-400'>mintafitouts@gmail.com</span>
+                <Mail className='w-5 h-5 text-orange-100 mt-0.5' />
+                <a
+                  href='mailto:mintafitouts@gmail.com'
+                  className='text-gray-400 hover:text-gray-200'
+                >
+                  mintafitouts@gmail.com
+                </a>
               </li>
+
               <li className='flex items-start gap-3'>
-                <Phone className='w-5 h-5 text-blue-400 mt-0.5' />
-                <span className='text-gray-400'>+974 50339547</span>
+                <Phone className='w-5 h-5 text-orange-100 mt-0.5' />
+                <a
+                  href='tel:+97450339547'
+                  className='text-gray-400 hover:text-gray-200'
+                >
+                  +974 50339547
+                </a>
               </li>
+
               <li className='flex items-start gap-3'>
-                <MapPin className='w-10 h-10 text-blue-400 mt-0.5' />
+                <MapPin className='w-10 h-10 text-orange-100 mt-0.5' />
                 <span className='text-gray-400'>
-                  P.O. Box 45741, Street no:3080, Zone no: 91, Floor: 1, Birkat Al Awameer, Qatar
+                  P.O. Box 45741, Street no:3080, Zone no: 91, Floor: 1, Birkat
+                  Al Awameer, Qatar
                 </span>
               </li>
             </ul>
@@ -132,9 +156,7 @@ const FooterScreen = () => {
 
         {/* Social Media & Copyright */}
         <div className='border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4'>
-          <p className='text-gray-400'>
-            © 2025 Minta. All rights reserved.
-          </p>
+          <p className='text-gray-400'>© 2025 Minta. All rights reserved.</p>
           <div className='flex items-center gap-4'>
             <a
               href='#'
@@ -158,7 +180,7 @@ const FooterScreen = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default FooterScreen
+export default FooterScreen;

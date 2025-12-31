@@ -1,11 +1,5 @@
 import { motion } from 'motion/react';
-import {
-  Target,
-  Eye,
-
-  Menu,
-  X
-} from 'lucide-react';
+import { Target, Eye, Menu, X } from 'lucide-react';
 import { VisionMissionCard } from './components/VisionMissionCard';
 import { StatCounter } from './components/StatCounter';
 import { Button } from './components/ui/button';
@@ -13,38 +7,111 @@ import AboutScreen from './aboutScreen';
 import Services from './servicesScreen';
 import ClientScreen from './clientScreen';
 import FooterScreen from './footer';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Counter from './components/counteranimation';
 
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    // Delay video loading slightly to prioritize initial page load
+    const timer = setTimeout(() => {
+      setShowVideo(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className='min-h-screen bg-linear-to-b from-gray-50 to-white'>
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white backdrop-blur-md z-50 border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-white/95 backdrop-blur-md shadow-lg'
+            : 'bg-transparent '
+        }`}
+      >
+        <div className='max-w-7xl mx-auto px-6 flex items-center justify-between'>
+          <div className='flex items-center gap-2'>
             <img
-              src='/Companylogo.png'
+              src={isScrolled ? '/Companylogo.png' : '/CompanylogoLight.png'}
               alt='Minta Logo'
-              className='max-w-[200px] max-h-[100px] object-contain'
+              className='max-w-[250px] max-h-[110px] object-contain'
             />
           </div>
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">About</a>
-            <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
-            <a href="#clients" className="text-gray-600 hover:text-blue-600 transition-colors">Clients</a>
-            <a href="#workforce" className="text-gray-600 hover:text-blue-600 transition-colors">Team</a>
-            <Button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white">
+          <div className='hidden md:flex items-center gap-8'>
+            <a
+              href='#about'
+              className={`transition-colors ${
+                isScrolled
+                  ? 'text-gray-700 hover:text-blue-600'
+                  : 'text-white hover:text-blue-400'
+              }`}
+            >
+              About
+            </a>
+            <a
+              href='#services'
+              className={`transition-colors ${
+                isScrolled
+                  ? 'text-gray-700 hover:text-blue-600'
+                  : 'text-white hover:text-blue-400'
+              }`}
+            >
+              Services
+            </a>
+            <a
+              href='#clients'
+              className={`transition-colors ${
+                isScrolled
+                  ? 'text-gray-700 hover:text-blue-600'
+                  : 'text-white hover:text-blue-400'
+              }`}
+            >
+              Clients
+            </a>
+            <a
+              href='#workforce'
+              className={`transition-colors ${
+                isScrolled
+                  ? 'text-gray-700 hover:text-blue-600'
+                  : 'text-white hover:text-blue-400'
+              }`}
+            >
+              Team
+            </a>
+            <Button className='bg-gradient-to-r from-orange-400 to-gray-300 hover:from-orange-200 hover:to-orange-300 text-white cursor-pointer'>
               Contact Us
             </Button>
           </div>
-          <div className="md:hidden">
+          <div className='md:hidden'>
             <button
-              className="text-gray-600 hover:text-blue-600 transition-colors p-2"
+              className={`transition-colors p-2 ${
+                isScrolled
+                  ? 'text-gray-700 hover:text-blue-600'
+                  : 'text-white hover:text-blue-400'
+              }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label='Toggle menu'
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}
             </button>
           </div>
         </div>
@@ -52,16 +119,16 @@ export default function App() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <motion.div
-            className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200"
+            className='md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200'
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="px-6 py-4 space-y-4">
+            <div className='px-6 py-4 space-y-4'>
               <motion.a
-                href="#about"
-                className="text-gray-600 hover:text-blue-600 transition-colors block py-2"
+                href='#about'
+                className='text-gray-600 hover:text-blue-600 transition-colors block py-2'
                 onClick={() => setIsMobileMenuOpen(false)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -70,8 +137,8 @@ export default function App() {
                 About
               </motion.a>
               <motion.a
-                href="#services"
-                className="text-gray-600 hover:text-blue-600 transition-colors block py-2"
+                href='#services'
+                className='text-gray-600 hover:text-blue-600 transition-colors block py-2'
                 onClick={() => setIsMobileMenuOpen(false)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -80,8 +147,8 @@ export default function App() {
                 Services
               </motion.a>
               <motion.a
-                href="#clients"
-                className="text-gray-600 hover:text-blue-600 transition-colors block py-2"
+                href='#clients'
+                className='text-gray-600 hover:text-blue-600 transition-colors block py-2'
                 onClick={() => setIsMobileMenuOpen(false)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -90,8 +157,8 @@ export default function App() {
                 Clients
               </motion.a>
               <motion.a
-                href="#workforce"
-                className="text-gray-600 hover:text-blue-600 transition-colors block py-2"
+                href='#workforce'
+                className='text-gray-600 hover:text-blue-600 transition-colors block py-2'
                 onClick={() => setIsMobileMenuOpen(false)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -104,7 +171,7 @@ export default function App() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white w-full">
+                <Button className='bg-gradient-to-r from-orange-400 to-gray-400  text-white w-full'>
                   Contact Us
                 </Button>
               </motion.div>
@@ -112,23 +179,45 @@ export default function App() {
           </motion.div>
         )}
       </nav>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-4'>
+        {/* Fallback Image - Shows while video is loading */}
         <div
-          className='
-      absolute inset-0 z-0
-      bg-cover bg-center
-      bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6))]
-    '
+          className={`absolute inset-0 z-0 bg-cover bg-center transition-opacity duration-700 ${
+            isVideoLoaded ? 'opacity-0' : 'opacity-100'
+          }`}
           style={{
             backgroundImage:
               "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('/coverImage.webp')",
           }}
         />
 
-        <div className='absolute inset-0 bg-linear-to-r from-blue-600/20 to-purple-600/20 z-0' />
+        {/* Video Background */}
+        {showVideo && (
+          <video
+            className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700 ${
+              isVideoLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload='metadata'
+            onLoadedData={() => setIsVideoLoaded(true)}
+            poster='/coverImage.webp'
+          >
+            <source src='/coverVideo.mp4' type='video/mp4' />
+            <source src='/your-video.webm' type='video/webm' />
+          </video>
+        )}
 
+        {/* Dark Overlay */}
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6))] z-[1]' />
+
+        {/* Gradient Overlay */}
+        <div className='absolute inset-0 bg-linear-to-r from-black-600/20 to-red-400/20 z-[1]' />
+
+        {/* Content */}
         <div className='relative z-10 max-w-7xl mx-auto px-6 text-center'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -136,7 +225,7 @@ export default function App() {
             transition={{ duration: 0.8 }}
           >
             <h1
-              className=' bg-white bg-clip-text text-transparent mb-8 tracking-tight text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-6xl'
+              className='bg-white bg-clip-text text-transparent mb-8 tracking-tight text-3xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-6xl'
               style={{
                 fontWeight: 800,
                 lineHeight: 1.1,
@@ -146,7 +235,9 @@ export default function App() {
             >
               More than promised
               <br />
-              <span className='bg-linear-to-r from-red-300 to-purple-400 bg-clip-text text-transparent'>Better than imagined.</span>
+              <span className='bg-gradient-to-r from-orange-300 to-gray-200 bg-clip-text text-transparent'>
+                Better than imagined.
+              </span>
             </h1>
 
             <p
@@ -157,17 +248,18 @@ export default function App() {
               contracting, engineering expertise, and reliable manpower
               solutions committed to safety, quality, and timely delivery.
             </p>
+
             <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
               <a
                 href='#about'
-                className='bg-white rounded-lg text-blue-600 hover:bg-gray-100 w-full sm:w-auto text-center'
+                className='bg-white rounded-lg text-orange-400 hover:bg-gray-100 w-full sm:w-auto text-center transition-colors'
                 style={{ fontSize: '1.125rem', padding: '0.75rem 2rem' }}
               >
                 Learn More
               </a>
               <a
                 href='#contact'
-                className='border-2 border-white rounded-lg text-white hover:bg-white/10 w-full sm:w-auto text-center'
+                className='border-2 border-white rounded-lg text-white hover:bg-white/10 w-full sm:w-auto text-center transition-colors'
                 style={{ fontSize: '1.125rem', padding: '0.75rem 2rem' }}
               >
                 Contact Us
@@ -176,37 +268,33 @@ export default function App() {
           </motion.div>
 
           <motion.div
-            className='flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 md:gap-16 mt-12 sm:mt-16 md:mt-20'
+            className='flex flex-row items-center justify-center gap-8 sm:gap-12 md:gap-16 mt-12 sm:mt-16 md:mt-20'
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <div className='text-center'>
-              <div
-                className='text-white text-4xl sm:text-5xl md:text-6xl'
-                style={{ fontWeight: 700 }}
-              >
-                100+
+              <div className='text-white text-4xl sm:text-5xl md:text-6xl font-bold'>
+                <Counter target={100} suffix='+' />
               </div>
               <div className='text-white/80 text-sm sm:text-base'>Clients</div>
             </div>
+
             <div className='text-center'>
-              <div
-                className='text-white text-4xl sm:text-5xl md:text-6xl'
-                style={{ fontWeight: 700 }}
-              >
-                10+
+              <div className='text-white text-4xl sm:text-5xl md:text-6xl font-bold'>
+                <Counter target={10} suffix='+' />
               </div>
               <div className='text-white/80 text-sm sm:text-base'>Years</div>
             </div>
+
             <div className='text-center'>
-              <div
-                className='text-white text-4xl sm:text-5xl md:text-6xl'
-                style={{ fontWeight: 700 }}
-              >
-                98%
+              <div className='text-white text-4xl sm:text-5xl md:text-6xl font-bold'>
+                <Counter target={98} suffix='%' />
               </div>
-              <div className='text-white/80 text-sm sm:text-base'>Satisfaction</div>
+              <div className='text-white/80 text-sm sm:text-base'>
+                Satisfaction
+              </div>
             </div>
           </motion.div>
         </div>
@@ -216,7 +304,7 @@ export default function App() {
       <AboutScreen />
 
       {/* Vision & Mission */}
-      <section className='py-24 px-6 bg-gradient-to-r from-red-200 to-blue-300'>
+      <section className='py-24 px-6 bg-linear-to-r from-orange-200 to-white to-blue-300'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
             className='text-center mb-16'
@@ -230,12 +318,22 @@ export default function App() {
             >
               Our Vision & Mission
             </h2>
-            <div className='w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full' />
+            <div className='w-20 h-1 bg-gradient-to-r from-orange-500 to-red-600 mx-auto rounded-full' />
           </motion.div>
 
           <div className='grid md:grid-cols-2 gap-8'>
-            <VisionMissionCard icon={Eye} title='Vision' image='/vision.webp' gradient="from-red-500 to-blue-600" />
-            <VisionMissionCard icon={Target} title='Mission' image='/mission.webp' gradient="from-blue-500 to-blue-600" />
+            <VisionMissionCard
+              icon={Eye}
+              title='Vision'
+              image='/vision.webp'
+              gradient='from-orange-500 to-blue-600'
+            />
+            <VisionMissionCard
+              icon={Target}
+              title='Mission'
+              image='/mission.webp'
+              gradient='from-blue-500 to-orange-600'
+            />
           </div>
         </div>
       </section>
@@ -249,7 +347,7 @@ export default function App() {
       {/* Workforce Section */}
       <section
         id='workforce'
-        className='py-24 px-6 bg-gradient-to-r from-red-200 to-blue-300'
+        className='py-24 px-6 bg-gradient-to-r from-orange-200 to-white'
       >
         <div className='max-w-7xl mx-auto'>
           <motion.div

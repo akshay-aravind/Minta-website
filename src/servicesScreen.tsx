@@ -14,7 +14,7 @@ import {
 const services = [
   {
     image: '/construction.webp',
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-red-400 to-orange-500",
     icon: Hammer,
     title: "General Construction",
     description:
@@ -26,7 +26,7 @@ const services = [
     image: '/gypsum.jpg',
     icon: Layers,
     title: "Gypsum & Interior Works",
-    gradient: "from-blue-500 to-cyan-500",
+    gradient: "from-cyan-500 to-orange-500",
     description:
       "Interior finishing solutions tailored for commercial, residential, and corporate spaces.",
     details:
@@ -36,7 +36,7 @@ const services = [
     icon: Paintbrush,
     title: "Painting & Tiles Works",
     image: '/painting.jpg',
-    gradient: "from-emerald-500 to-teal-500",
+    gradient: "from-emerald-500 to-orange-500",
     description:
       "Premium painting and flooring services with durable, high-quality finishes.",
     details:
@@ -46,7 +46,7 @@ const services = [
     icon: Droplet,
     image: '/waterproof.webp',
     title: "Waterproofing & Epoxy",
-    gradient: "from-amber-500 to-yellow-500",
+    gradient: "from-amber-500 to-cyan-500",
     description:
       "Protective coatings and durable flooring systems for long-term resilience.",
     details:
@@ -56,7 +56,7 @@ const services = [
     icon: Plug,
     title: "MEP Works",
     image: '/pipings.jpeg',
-    gradient: "from-red-500 to-orange-500",
+    gradient: "from-orange-500 to-blue-500",
     description:
       "Reliable Mechanical, Electrical & Plumbing services for all project scales.",
     details:
@@ -66,7 +66,7 @@ const services = [
     icon: Building,
     image: '/glassworks.jpeg',
     title: "Cladding & Glass Works",
-    gradient: "from-indigo-500 to-purple-500",
+    gradient: "from-blue-500 to-purple-500",
     description:
       "Architectural cladding and glazing solutions for modern, elegant structures.",
     details:
@@ -78,7 +78,7 @@ const Services = () => {
   return (
     <section
       id='services'
-      className='py-24  px-6 bg-linear-to-b from-red-100 to-blue-200 relative overflow-hidden'
+      className='py-24  px-6 bg-linear-to-r from-orange-200 to-white-300 relative overflow-hidden'
     >
       <div className='absolute inset-0 bg-grid-pattern opacity-5' />
 
@@ -101,7 +101,7 @@ const Services = () => {
           >
             Building the future with innovative engineering, skilled manpower, and uncompromised quality.
           </p>
-          <div className='w-20 h-1 bg-linear-to-r from-red-500 to-blue-600 mx-auto rounded-full mt-6' />
+          <div className='w-20 h-1 bg-linear-to-r from-orange-500 to-red-600 mx-auto rounded-full mt-6' />
         </motion.div>
 
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>

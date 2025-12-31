@@ -40,7 +40,7 @@ export function ServiceCard({
   return (
     <motion.div
       layout
-      className="relative rounded-3xl min-h-[450px] sm:min-h-[550px] h-full shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+      className="relative rounded-3xl min-h-[550px]  h-full shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
       whileHover={{ y: -8, scale: 1.02 }}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}

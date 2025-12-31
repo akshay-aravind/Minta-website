@@ -22,11 +22,10 @@
 }
 
 .moving-gradient {
-  background: linear-gradient(90deg, #e13535, #d86c6c, #dc87a7);
+  background: linear-gradient(90deg, #fb923c, #f87171, #9ca3af);
   background-size: 200% 200%;
-  animation: gradientMove 3s ease-in-out infinite;
+  animation: gradientMove 3.5s ease-in-out infinite;
 }
-
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

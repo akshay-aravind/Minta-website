@@ -80,20 +80,20 @@ const AboutScreen = () => {
               project support.
             </p>
 
-            <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6'>
+            <div className='grid grid-cols-3 gap-4 sm:gap-6'>
               <div className='text-center p-4 moving-gradient border-gray-400 border-2 rounded-xl'>
                 <CheckCircle2 className='w-8 h-8 text-white mx-auto mb-2' />
-                <div className='text-white font-medium'>Quality</div>
+                <div className='text-white font-medium text-sm sm:text-lg'>Quality</div>
               </div>
 
               <div className='text-center p-4 moving-gradient border-gray-400 border-2 rounded-xl'>
                 <TrendingUp className='w-8 h-8 text-white mx-auto mb-2' />
-                <div className='text-white font-medium'>Innovation</div>
+                <div className='text-white font-medium text-sm sm:text-lg'>Innovation</div>
               </div>
 
               <div className='text-center p-4 moving-gradient border-gray-400 border-2 rounded-xl'>
                 <Users className='w-8 h-8 text-white mx-auto mb-2' />
-                <div className='text-white font-medium'>Partnership</div>
+                <div className='text-white font-medium text-sm sm:text-lg'>Partnership</div>
               </div>
             </div>
           </motion.div>

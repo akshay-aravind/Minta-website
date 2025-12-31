@@ -93,9 +93,9 @@ export default function App() {
             >
               Team
             </a>
-            <Button className='bg-gradient-to-r from-orange-400 to-gray-300 hover:from-orange-200 hover:to-orange-300 text-white cursor-pointer'>
+            <a href='#contact' className='bg-gradient-to-r px-4 py-2 rounded-lg from-orange-400 to-gray-300 hover:from-orange-200 hover:to-orange-300 text-white cursor-pointer'>
               Contact Us
-            </Button>
+            </a>
           </div>
           <div className='md:hidden'>
             <button
@@ -119,13 +119,13 @@ export default function App() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <motion.div
-            className='md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200'
+            className='md:hidden  bg-white/95 w-full backdrop-blur-md border-t border-gray-200'
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className='px-6 py-4 space-y-4'>
+            <div className='px-6 py-4 space-y-4 w-full'>
               <motion.a
                 href='#about'
                 className='text-gray-600 hover:text-blue-600 transition-colors block py-2'
@@ -166,15 +166,17 @@ export default function App() {
               >
                 Team
               </motion.a>
-              <motion.div
+              <motion.a
+              href='#contact'
+              className='w-full'
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <Button className='bg-gradient-to-r from-orange-400 to-gray-400  text-white w-full'>
+                <Button  className='px-5 py-2 rounded-xl mx-auto w-full bg-gradient-to-r from-orange-400 to-gray-400  text-white '>
                   Contact Us
-                </Button>
-              </motion.div>
+                </ Button>
+              </motion.a>
             </div>
           </motion.div>
         )}

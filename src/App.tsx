@@ -168,6 +168,7 @@ export default function App() {
               </motion.a>
               <motion.a
               href='#contact'
+               onClick={() => setIsMobileMenuOpen(false)}
               className='w-full'
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}

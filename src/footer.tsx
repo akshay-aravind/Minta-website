@@ -11,7 +11,7 @@ import React from 'react';
 
 const FooterScreen = () => {
   return (
-    <footer id='contact' className='bg-gray-900 text-white py-16 px-6'>
+    <footer className='bg-gray-900 text-white py-16 px-6'>
       <div className='max-w-7xl mx-auto'>
         <div className='grid md:grid-cols-4 gap-12 mb-12'>
           {/* Company Info */}
@@ -118,7 +118,7 @@ const FooterScreen = () => {
           </div>
 
           {/* Contact */}
-          <div>
+          <div id='contact'>
             <h4 className='mb-4' style={{ fontWeight: 600 }}>
               Contact Us
             </h4>

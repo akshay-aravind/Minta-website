@@ -124,7 +124,7 @@ const FooterScreen = () => {
             </h4>
             <ul className='space-y-3'>
               <li className='flex items-start gap-3'>
-                <Mail className='w-5 h-5 text-orange-100 mt-0.5' />
+                <Mail className='w-5 h-5 text-red-300 mt-0.5' />
                 <a
                   href='mailto:mintafitouts@gmail.com'
                   className='text-gray-400 hover:text-gray-200'
@@ -134,7 +134,7 @@ const FooterScreen = () => {
               </li>
 
               <li className='flex items-start gap-3'>
-                <Phone className='w-5 h-5 text-orange-100 mt-0.5' />
+                <Phone className='w-5 h-5 text-red-300 mt-0.5' />
                 <a
                   href='tel:+97450339547'
                   className='text-gray-400 hover:text-gray-200'
@@ -144,7 +144,7 @@ const FooterScreen = () => {
               </li>
 
               <li className='flex items-start gap-3'>
-                <MapPin className='w-10 h-10 text-orange-100 mt-0.5' />
+                <MapPin className='w-10 h-10 text-red-300 mt-0.5' />
                 <span className='text-gray-400'>
                   P.O. Box 45741, Street no:3080, Zone no: 91, Floor: 1, Birkat
                   Al Awameer, Qatar

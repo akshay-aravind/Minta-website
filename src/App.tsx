@@ -57,8 +57,8 @@ export default function App() {
               href='#about'
               className={`transition-colors ${
                 isScrolled
-                  ? 'text-gray-700 hover:text-blue-600'
-                  : 'text-white hover:text-blue-400'
+                  ? 'text-gray-700 hover:text-red-600'
+                  : 'text-white hover:text-red-400'
               }`}
             >
               About
@@ -67,8 +67,8 @@ export default function App() {
               href='#services'
               className={`transition-colors ${
                 isScrolled
-                  ? 'text-gray-700 hover:text-blue-600'
-                  : 'text-white hover:text-blue-400'
+                  ? 'text-gray-700 hover:text-red-600'
+                  : 'text-white hover:text-red-400'
               }`}
             >
               Services
@@ -77,8 +77,8 @@ export default function App() {
               href='#clients'
               className={`transition-colors ${
                 isScrolled
-                  ? 'text-gray-700 hover:text-blue-600'
-                  : 'text-white hover:text-blue-400'
+                  ? 'text-gray-700 hover:text-red-600'
+                  : 'text-white hover:text-red-400'
               }`}
             >
               Clients
@@ -87,13 +87,13 @@ export default function App() {
               href='#workforce'
               className={`transition-colors ${
                 isScrolled
-                  ? 'text-gray-700 hover:text-blue-600'
-                  : 'text-white hover:text-blue-400'
+                  ? 'text-gray-700 hover:text-red-600'
+                  : 'text-white hover:text-red-400'
               }`}
             >
               Team
             </a>
-            <a href='#contact' className='bg-gradient-to-r px-4 py-2 rounded-lg from-orange-400 to-gray-300 hover:from-orange-200 hover:to-orange-300 text-white cursor-pointer'>
+            <a href='#contact' className='bg-gradient-to-r px-4 py-2 rounded-lg from-red-500 to-red-500 hover:from-red-300 hover:to-red-300 text-white cursor-pointer'>
               Contact Us
             </a>
           </div>
@@ -128,7 +128,7 @@ export default function App() {
             <div className='px-6 py-4 space-y-4 w-full'>
               <motion.a
                 href='#about'
-                className='text-gray-600 hover:text-blue-600 transition-colors block py-2'
+                className='text-gray-600 hover:text-red-600 transition-colors block py-2'
                 onClick={() => setIsMobileMenuOpen(false)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -138,7 +138,7 @@ export default function App() {
               </motion.a>
               <motion.a
                 href='#services'
-                className='text-gray-600 hover:text-blue-600 transition-colors block py-2'
+                className='text-gray-600 hover:text-red-600 transition-colors block py-2'
                 onClick={() => setIsMobileMenuOpen(false)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -148,7 +148,7 @@ export default function App() {
               </motion.a>
               <motion.a
                 href='#clients'
-                className='text-gray-600 hover:text-blue-600 transition-colors block py-2'
+                className='text-gray-600 hover:text-red-600 transition-colors block py-2'
                 onClick={() => setIsMobileMenuOpen(false)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -158,7 +158,7 @@ export default function App() {
               </motion.a>
               <motion.a
                 href='#workforce'
-                className='text-gray-600 hover:text-blue-600 transition-colors block py-2'
+                className='text-gray-600 hover:text-red-600 transition-colors block py-2'
                 onClick={() => setIsMobileMenuOpen(false)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -174,7 +174,7 @@ export default function App() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <Button  className='px-5 py-2 rounded-xl mx-auto w-full bg-gradient-to-r from-orange-400 to-gray-400  text-white '>
+                <Button  className='px-5 py-2 rounded-xl mx-auto w-full bg-gradient-to-r from-red-400 to-red-400  text-white '>
                   Contact Us
                 </ Button>
               </motion.a>
@@ -238,7 +238,7 @@ export default function App() {
             >
               More than promised
               <br />
-              <span className='bg-gradient-to-r from-orange-300 to-gray-200 bg-clip-text text-transparent'>
+              <span className='bg-gradient-to-r from-red-300 to-gray-200 bg-clip-text text-transparent'>
                 Better than imagined.
               </span>
             </h1>
@@ -255,7 +255,7 @@ export default function App() {
             <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
               <a
                 href='#about'
-                className='bg-white rounded-lg text-orange-400 hover:bg-gray-100 w-full sm:w-auto text-center transition-colors'
+                className='bg-white rounded-lg text-red-400 hover:bg-gray-100 w-full sm:w-auto text-center transition-colors'
                 style={{ fontSize: '1.125rem', padding: '0.75rem 2rem' }}
               >
                 Learn More
@@ -307,7 +307,7 @@ export default function App() {
       <AboutScreen />
 
       {/* Vision & Mission */}
-      <section className='py-24 px-6 bg-linear-to-r from-orange-200 to-white to-blue-300'>
+      <section className='py-24 px-6 bg-linear-to-r from-red-200 to-white to-red-300'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
             className='text-center mb-16'
@@ -350,7 +350,7 @@ export default function App() {
       {/* Workforce Section */}
       <section
         id='workforce'
-        className='py-24 px-6 bg-gradient-to-r from-orange-200 to-white'
+        className='py-24 px-6 bg-gradient-to-r from-red-200 to-white'
       >
         <div className='max-w-7xl mx-auto'>
           <motion.div

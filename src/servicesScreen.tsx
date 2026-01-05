@@ -78,7 +78,7 @@ const Services = () => {
   return (
     <section
       id='services'
-      className='py-24  px-6 bg-linear-to-r from-orange-200 to-white-300 relative overflow-hidden'
+      className='py-24  px-6 bg-linear-to-r from-red-200 to-white-300 relative overflow-hidden'
     >
       <div className='absolute inset-0 bg-grid-pattern opacity-5' />
 

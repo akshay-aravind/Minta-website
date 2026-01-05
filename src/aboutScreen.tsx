@@ -5,7 +5,7 @@ const AboutScreen = () => {
   return (
     <section
       id='about'
-      className='py-12 sm:py-16 bg-linear-to-r from-orange-200 to-white lg:py-24 px-4 sm:px-6 bg-white'
+      className='py-12 sm:py-16 bg-linear-to-r from-red-200 to-white lg:py-24 px-4 sm:px-6 bg-white'
     >
       <div className='max-w-7xl mx-auto'>
         <motion.div

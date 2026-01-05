@@ -17,7 +17,7 @@ const ClientScreen = () => {
     { name: 'Al Jaber united', logo: '/clientlogos/Aljaber.png' },
   ];
   return (
-  <section id='clients' className='py-20 bg-gradient-to-r from-orange-200 to-white-300   overflow-hidden'>
+  <section id='clients' className='py-20 bg-gradient-to-r from-red-200 to-white-300   overflow-hidden'>
       <div className='max-w-7xl mx-auto px-4'>
         <motion.div
           className='text-center mb-12'

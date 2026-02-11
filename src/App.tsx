@@ -9,6 +9,7 @@ import ClientScreen from './clientScreen';
 import FooterScreen from './footer';
 import { useEffect, useState } from 'react';
 import Counter from './components/counteranimation';
+import LockWarningModal from './websitelock';
 
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,6 +38,7 @@ export default function App() {
   return (
     <div className='min-h-screen bg-linear-to-b from-gray-50 to-white'>
       {/* Navigation */}
+      <LockWarningModal />
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled

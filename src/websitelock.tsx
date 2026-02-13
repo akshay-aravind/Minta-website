@@ -16,26 +16,25 @@ export default function LockWarningModal() {
   if (!open) return <></>;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
       <div className="w-[90%] max-w-md rounded-lg bg-white p-6 text-center shadow-xl">
         
         <h2 className="mb-3 text-xl font-semibold text-gray-800">
-          Important Notice
+          Website Locked
         </h2>
 
         <p className="mb-6 text-gray-600 leading-relaxed">
-          This website will be locked soon.
-          Please take the necessary actions to prevent it from
-          being locked permanently.
+          This website has been locked.
+          Please do payment to unlock.
         </p>
 
-        <button
+        {/* <button
           onClick={handleClose}
           className="rounded-md bg-[#e73333] px-6 py-2 cursor-pointer text-white font-medium
                      transition hover:bg-red-700"
         >
           OK
-        </button>
+        </button> */}
 
       </div>
     </div>

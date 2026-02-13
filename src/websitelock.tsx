@@ -24,8 +24,7 @@ export default function LockWarningModal() {
         </h2>
 
         <p className="mb-6 text-gray-600 leading-relaxed">
-          This website has been locked.
-          Please do payment to unlock.
+          Please contact your developers
         </p>
 
         {/* <button
